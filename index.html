@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Important pour le responsive mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#000000">
+  <title>KXFLIX</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       ÉCRAN DE MOT DE PASSE
+  ========================== -->
+  <div id="password-screen">
+
+    <div class="password-box">
+
+      <div class="password-logo">KX</div>
+
+      <h1>KXFLIX</h1>
+
+      <p>Entrez le code pour continuer</p>
+
+      <input
+        type="password"
+        id="password-input"
+        maxlength="2"
+        autocomplete="off"
+        autocapitalize="characters"
+        spellcheck="false"
+        placeholder="••"
+      >
+
+      <button id="password-button" onclick="verifierMotDePasse()">
+        ENTRER
+      </button>
+
+      <div id="password-error">
+        Code incorrect
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       SITE PRINCIPAL
+  ========================== -->
+  <div id="site">
+
+    <!-- Effets rouges -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="background-glow glow-three"></div>
+
+
+    <header>
+      <h1>KXFLIX</h1>
+    </header>
+
+
+    <main>
+
+      <!-- CARROUSEL -->
+      <div class="carousel">
+
+        <div class="film-track">
+
+          <!-- GROUPE 1 -->
+          <div class="film-group">
+
+            <!-- OBSESSION -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://vrodaz.com/iframe/ed176505')"
+            >
+              <img
+                src="https://m.media-amazon.com/images/S/pv-target-images/86c0f135b4699427fc84684b09990c0bbb69a41b2921fc577dcd0fbf59851bc6._UR1920,1080_.jpg"
+                alt="Obsession"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Obsession
+              </div>
+            </div>
+
+
+            <!-- TOY STORY 5 -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://fradov.com/iframe/78e64c70')"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA7j43OjYSL25Vukor9_5_nPm3sfohjI1bt0DNTU2o8UyiWqsZMNyhDR98&s=10"
+                alt="Toy Story 5"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Toy Story 5
+              </div>
+            </div>
+
+
+            <!-- SPIDER-MAN NEW GENERATION -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://sharecloudy.com/iframe/Bm7bBpnpaN')"
+            >
+              <img
+                src="https://snworksceo.imgix.net/ttd/86058c86-ffe3-45ff-bd60-f6f8d28dbdd1.sized-1000x1000.jpg?w=800&dpr=2&ar=16%3A9&fit=crop&crop=faces"
+                alt="Spider-Man : New Generation"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Spider-Man : New Generation
+              </div>
+            </div>
+
+
+            <!-- SPIDER-MAN ACROSS -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://sharecloudy.com/iframe/1V4HHtvvKr')"
+            >
+              <img
+                src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/08f3260f-1512-4c90-a3df-fc2e407ba708/d5f22ff0-d35b-420a-bc64-3d5f9ba3818b?host=wbd-images.prod-vod.h264.io&partner=beamcom"
+                alt="Spider-Man : Across the Spider-Verse"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Spider-Man : Across the Spider-Verse
+              </div>
+            </div>
+
+
+            <!-- SCREAM 7 -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://vromov.com/iframe/iqdDB5G1i2')"
+            >
+              <img
+                src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/8c932462-5fed-4a21-bfd3-275636f21e0b.__CR0,0,1940,1200_PT0_SX970_V1___.jpg"
+                alt="Scream 7"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Scream 7
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- GROUPE 2 : COPIE POUR LE DÉFILEMENT INFINI -->
+          <div class="film-group">
+
+            <!-- OBSESSION -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://vrodaz.com/iframe/ed176505')"
+            >
+              <img
+                src="https://m.media-amazon.com/images/S/pv-target-images/86c0f135b4699427fc84684b09990c0bbb69a41b2921fc577dcd0fbf59851bc6._UR1920,1080_.jpg"
+                alt="Obsession"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Obsession
+              </div>
+            </div>
+
+
+            <!-- TOY STORY 5 -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://fradov.com/iframe/78e64c70')"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA7j43OjYSL25Vukor9_5_nPm3sfohjI1bt0DNTU2o8UyiWqsZMNyhDR98&s=10"
+                alt="Toy Story 5"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Toy Story 5
+              </div>
+            </div>
+
+
+            <!-- SPIDER-MAN NEW GENERATION -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://sharecloudy.com/iframe/Bm7bBpnpaN')"
+            >
+              <img
+                src="https://snworksceo.imgix.net/ttd/86058c86-ffe3-45ff-bd60-f6f8d28dbdd1.sized-1000x1000.jpg?w=800&dpr=2&ar=16%3A9&fit=crop&crop=faces"
+                alt="Spider-Man : New Generation"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Spider-Man : New Generation
+              </div>
+            </div>
+
+
+            <!-- SPIDER-MAN ACROSS -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://sharecloudy.com/iframe/1V4HHtvvKr')"
+            >
+              <img
+                src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/08f3260f-1512-4c90-a3df-fc2e407ba708/d5f22ff0-d35b-420a-bc64-3d5f9ba3818b?host=wbd-images.prod-vod.h264.io&partner=beamcom"
+                alt="Spider-Man : Across the Spider-Verse"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Spider-Man : Across the Spider-Verse
+              </div>
+            </div>
+
+
+            <!-- SCREAM 7 -->
+            <div
+              class="film"
+              onclick="ouvrirFilm('https://vromov.com/iframe/iqdDB5G1i2')"
+            >
+              <img
+                src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/8c932462-5fed-4a21-bfd3-275636f21e0b.__CR0,0,1940,1200_PT0_SX970_V1___.jpg"
+                alt="Scream 7"
+                loading="lazy"
+              >
+
+              <div class="film-name">
+                Scream 7
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TELEGRAM -->
+      <div class="telegram">
+        <a
+          href="https://t.me/kxback"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Telegram
+        </a>
+      </div>
+
+    </main>
+
+
+    <!-- =========================
+         LECTEUR
+    ========================== -->
+    <div id="lecteur">
+
+      <button
+        id="fermer"
+        onclick="fermerFilm()"
+        aria-label="Fermer"
+      >
+        ✕
+      </button>
+
+      <div class="video-container">
+        <iframe
+          id="video"
+          src=""
+          title="KXFLIX"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowfullscreen
+          frameborder="0"
+        ></iframe>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
