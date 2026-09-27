@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* Écran d'accueil */
+
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Dossier */
+
+.folder {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+
+    padding: 20px;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.folder:hover {
+    transform: scale(1.04);
+}
+
+.folder:active {
+    transform: scale(0.98);
+}
+
+.folder span {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+/* Icône dossier */
+
+.folder-icon {
+    width: 72px;
+    height: 55px;
+    position: relative;
+    filter: drop-shadow(0 8px 25px rgba(255, 255, 255, 0.06));
+}
+
+.folder-tab {
+    position: absolute;
+    left: 3px;
+    top: 0;
+    width: 27px;
+    height: 13px;
+    background: #c8c8c8;
+    border-radius: 5px 5px 0 0;
+}
+
+.folder-body {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+    height: 45px;
+    background: linear-gradient(
+        145deg,
+        #eeeeee,
+        #a9a9a9
+    );
+    border-radius: 4px 7px 7px 7px;
+}
+
+/* Bouton musique */
+
+.sound-button {
+    position: fixed;
+    right: 24px;
+    bottom: 22px;
+
+    width: 32px;
+    height: 32px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.sound-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+/* Lecteur */
+
+.player {
+    position: fixed;
+    inset: 0;
+
+    background: #000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+}
+
+.player.active {
+    display: flex;
+}
+
+.player video {
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: contain;
+
+    background: #000;
+}
+
+/* Bouton fermeture */
+
+.close-button {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+
+    width: 36px;
+    height: 36px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.45);
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.player:hover .close-button {
+    opacity: 1;
+}
+
+.close-button:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
